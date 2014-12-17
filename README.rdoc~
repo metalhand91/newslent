@@ -1,0 +1,14 @@
+== README ==
+
+Ruby 2.5.1
+Rails 4.1.8
+MySQL 5.5.4
+
+Страница ленты:
+http://localhost:3000/
+
+Страница редактирования ленты:
+http://localhost:3000/lents
+
+Дамп базы:
+/db/data.yaml

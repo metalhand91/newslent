@@ -1,0 +1,29 @@
+<%= form_for(@lent) do |f| %>
+  <% if @lent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lent.errors.count, "error") %> prohibited this lent from being saved:</h2>
+
+      <ul>
+      <% @lent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Заголовок %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :Дата %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :Текст %><br>
+    <%= f.text_area :text, size: "100x20" %>
+  </div>
+  <div class="actions">
+    <%= f.submit :Добавить %>
+  </div>
+<% end %>

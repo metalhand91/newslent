@@ -1,0 +1,26 @@
+<style>
+
+    text {
+        white-space: pre-wrap;
+    }
+
+</style>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Заголовок:</strong> 
+  <%= @lent.title %>
+</p>
+
+<p>
+  <strong>Текст новости:</strong><br>
+  <%= @lent.text %>
+</p>
+
+<p>
+  <strong>Дата:</strong>
+  <text> <%= @lent.date %> <text/>
+</p>
+
+<%= link_to 'Редактировать', edit_lent_path(@lent) %> |
+<%= link_to 'Назад', lents_path %>

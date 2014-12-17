@@ -1,0 +1,17 @@
+<table>
+  
+  <tbody>
+    <% @lents.each do |lent| %>
+      <tr>
+        <td><h2><%= lent.title %></h2></td>        
+      </tr>
+      <tr>
+          <td><%= lent.text %></td>
+      </tr>
+      <tr>
+         <td><%= lent.date %> <hr></td>	
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>

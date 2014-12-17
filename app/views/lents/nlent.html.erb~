@@ -1,0 +1,30 @@
+<style>
+table {
+
+    border: 1px solid black;  
+}
+.content {
+    width: 900px; 
+    
+    white-space: pre-wrap;
+}
+
+</style>
+
+<table align="center">
+  
+  <tbody>
+    <% @lents.reverse.each do |lent| %>
+      <tr>
+        <td><center><h2><%= lent.title %></h2></center></td>        
+      </tr>
+      <tr>
+          <td> <div class="content"> <%= lent.text %> </div></td>
+      </tr>
+      <tr>
+         <td><%= lent.date %><hr></td>	
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>

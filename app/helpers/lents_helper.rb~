@@ -1,0 +1,5 @@
+module LentsHelper
+  def render_text
+    render :partial => "/lent/text/#{lent.text}"
+  end
+end

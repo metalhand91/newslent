@@ -1,0 +1,44 @@
+<style>
+
+    text {
+        white-space: pre-wrap;
+    }
+
+</style>
+
+<h1>Редактирование ленты</h1>
+
+<%= link_to 'На главную', root_path %> <br>
+<h3></h3>
+<%= link_to 'Добавить новость', new_lent_path %> 
+<h3></h3>
+
+<table>
+  
+  <tbody>
+    <% @lents.reverse.each do |lent| %>
+      <tr>
+	<td><b>Заголовок:</b></td>
+        <td><b><%= lent.title %></b></td>
+      </tr>
+      <tr>
+	<td><b>Текст<br>новости:</b></td>
+        <td><text> <%= lent.text %><text> </td>
+      </tr>
+      <tr>
+	<td><b>Дата:</b></td>
+        <td><%= lent.date %> </td>
+      </td>
+      <tr>
+<td></td>        
+	<td><%= link_to 'Показать', lent %>
+        <%= link_to 'Редактировать', edit_lent_path(lent) %>
+        <%= link_to 'Удалить', lent, method: :delete, data: { confirm: 'Вы уверены что хотите удалить нововсть?' } %> <hr> </td>
+      </tr>
+      
+    <% end %>
+
+  </tbody>
+</table>
+
+
